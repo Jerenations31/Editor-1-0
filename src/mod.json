@@ -1,0 +1,48 @@
+{
+	"geode": "5.0.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "tuusuario.editor-1-0",
+	"name": "Editor 1.0",
+	"version": "v0.1.0",
+	"developer": "TuUsuario",
+	"description": "Convierte el editor de niveles en el de la 1.0: solo objetos de la 1.0, sin pestañas, sin copiar/pegar, sin rotación de 45°, sin modo libre ni medio bloque.",
+	"tags": ["editor", "enhancement"],
+	"dependencies": [
+		{
+			"id": "geode.node-ids",
+			"version": ">=1.10.0",
+			"importance": "required"
+		}
+	],
+	"settings": {
+		"palette-override": {
+			"type": "string",
+			"name": "IDs de objetos (anula la lista 1.0)",
+			"description": "IDs separados por comas, en el orden en que aparecen en el editor. Vacío = lista 1.0 incluida en el mod. Reabre el editor para aplicar.",
+			"default": ""
+		},
+		"blocked-edit-tags": {
+			"type": "string",
+			"name": "Botones de Edit a quitar (tags)",
+			"description": "Tags de los botones de la pestaña Edit que se eliminan (medio bloque, 45°, rotación libre...). El log muestra los tags reales.",
+			"default": "13,14,15,16,17,18,19,20,25,26,27,28"
+		},
+		"hide-node-ids": {
+			"type": "string",
+			"name": "Nodos de la interfaz a ocultar (IDs)",
+			"description": "IDs de nodos (de Node IDs) separados por comas. Se ocultan al abrir el editor.",
+			"default": "copy-button,paste-button,copy-paste-button,duplicate-button,copy-state-button,paste-state-button,paste-color-button,copy-values-button,free-move-button,snap-button,rotate-button,go-to-layer-button,go-to-base-button,layer-menu,link-menu,copy-paste-menu"
+		},
+		"dump-ui": {
+			"type": "bool",
+			"name": "Volcar la interfaz del editor al log",
+			"description": "Escribe en el log los nodos del editor y los tags de la pestaña Edit. Útil para ajustar los IDs de arriba.",
+			"default": true
+		}
+	}
+}
